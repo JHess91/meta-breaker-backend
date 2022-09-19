@@ -3,7 +3,7 @@ import cors from "cors"
 import { MongoClient } from "mongodb"
 import 'dotenv/config'
 
-const URI = "mongodb+srv://JustinHess1:Ash10012020!@justincluster.p1ygchi.mongodb.net/test" 
+const URI = process.env.MONGO_URI
 const client = new MongoClient(URI)
 const database = client.db("apex-legends")
 const legends = database.collection("legends")
