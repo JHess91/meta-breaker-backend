@@ -16,11 +16,11 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.listen(PORT, () => console.log("API is running on", PORT))
+app.listen(PORT, () => console.log("API is running on", process.env.PORT))
 
 //GET
-app.get('/', async (req, res) => {
-  const allLegends = await legends.find().toArray()
-  res.send(allLegends)
-  console.log(allLegends)
-})
+// app.get('/', async (req, res) => {
+//   const allLegends = await legends.find().toArray()
+//   res.send(allLegends)
+//   console.log(allLegends)
+// })
