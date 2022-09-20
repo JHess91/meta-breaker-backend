@@ -10,7 +10,7 @@ const legends = database.collection("legends")
 
 client.connect()
 console.log("Connected to mongoDB")
-const PORT = 4001
+const PORT = process.env.PORT
 
 const app = express()
 app.use(cors())
